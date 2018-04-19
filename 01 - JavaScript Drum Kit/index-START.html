@@ -58,42 +58,6 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-
-<<<<<<< HEAD
-  function playSound(e){
-
-    //const audio is saying give me the DOM element that is an audio element with an attribute of data-key=${e.keyCode}. The keydown event tells us which key was hit, and the label on the key describes the desired sound. The keycode of the key and the data-key of the audio element both point to the same sound.
-
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-
-    // select the div with the name of the sound and keyname
-    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-    
-    console.log(key);
-    
-    if (!audio) {
-      return;
-    }
-    audio.currentTime = 0; // rewind to start
-    audio.play(); // play audio
-    key.classList.add('playing'); // adding class of playing (has animation from css)
-  };  
-
-  function removeTransition(e){
-    if (e.propertyName !== 'transform') return; // skip if not transform
-    this.classList.remove('playing'); 
-  };
-
-  // get all keys and add transitionEnd event. Listening for when an event is done
-  const keys = document.querySelectorAll('.key');
-
-  // array of elements, add event listener to each element, when transitionEnd is heard we run removeTransition
-  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-  window.addEventListener('keydown', playSound);
-  
-=======
->>>>>>> 508e4765b1548621496d6ce17a92df60c721db29
 </script>
 
 

@@ -32,10 +32,6 @@ body,html {
 }
 
 .playing {
-<<<<<<< HEAD
-  /*scale up to 1.1 */
-=======
->>>>>>> 508e4765b1548621496d6ce17a92df60c721db29
   transform: scale(1.1);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
@@ -51,4 +47,3 @@ kbd {
   text-transform: uppercase;
   letter-spacing: .1rem;
   color: #ffc600;
-}
