@@ -27,7 +27,11 @@ a {
   text-decoration: none;
   color:black;
   background:rgba(0,0,0,0.05);
+<<<<<<< HEAD
   border-radius: 20px
+=======
+  border-radius: 20px;
+>>>>>>> 508e4765b1548621496d6ce17a92df60c721db29
 }
 
 .highlight {
@@ -40,7 +44,11 @@ a {
   z-index: -1;
   border-radius:20px;
   display: block;
+<<<<<<< HEAD
   box-shadow: 0 0 10px rgba(0,0,0,0.2)
+=======
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+>>>>>>> 508e4765b1548621496d6ce17a92df60c721db29
 }
 
 .menu {
