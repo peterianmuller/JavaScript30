@@ -22,9 +22,32 @@
 
   <style>
 
+  :root {
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 10px;  
+  }
+
+  img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+  }
+
+  .hl {
+    color: var(--base);
+  }
+
+  /*here we are updating the variable base on the h2 element, which is a close scope for the hl classed span that lives inside of it. This is similar to JS, where the variables referenced in a certain location will be evaluated at the closest scopes */
+
+  h2 {
+    --base: #BADA55;
+  }
+
     /*
       misc styles, nothing to do with CSS variables
     */
+
 
     body {
       text-align: center;
@@ -45,6 +68,16 @@
   </style>
 
   <script>
+    const inputs = document.querySelectorAll('.controls input');
+    function handleUpdate(){
+      const suffix = this.dataset.sizing || '';
+      // remember that anytime we are using JS inside of backticks we need to use ${}
+      document.documentElement.style.setProperty(`--${this.name}`, `${this.value}${suffix}`)
+      
+    }
+    inputs.forEach(input=>input.addEventListener('change', handleUpdate));
+    // note that this below method allows us to detect changes when the input is selected and we are moving around but haven't stopped selecting the input. Downfall is that we will detect a change when we're simply hovering over the input. However, the value of the input doesn't change when we simply hover over it.
+    inputs.forEach(input=>input.addEventListener('mousemove', handleUpdate));
   </script>
 
 </body>
